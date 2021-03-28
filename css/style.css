@@ -227,6 +227,7 @@
         object-fit: contain;
         height: 190px;
         max-width: 140px;
+         margin: auto;
     }
     
     .goods-title {
