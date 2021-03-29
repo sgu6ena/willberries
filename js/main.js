@@ -135,8 +135,7 @@ const cart = {
     },
 }
 cart.totalCount();
-
-
+//навешивание события на весь документ
 document.body.addEventListener('click', event => {
     const addToCart = event.target.closest('.add-to-cart');
     if (addToCart) {
@@ -259,12 +258,10 @@ navigationLink.forEach( link =>{
 
 const modalForm = document.querySelector('.modal-form');
 
-
-const postData = dataUser => fetch ('server.php',{
+const postData = dataUser => fetch ('./server.php',{
     method: 'POST',
     body: dataUser,
 });
-
 
 const validForm = formData => {
     let valid = false;
@@ -311,5 +308,4 @@ if (validForm(formData) && cart.getCountCartGoods()){
                 alert('Заполните поля правильно');
             }
         }
-
 });
